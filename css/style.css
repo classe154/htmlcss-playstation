@@ -1,0 +1,251 @@
+:root {
+  --font-base-color: 0, 0, 0;
+  --font-light-color: 255, 255, 255;
+  --a-hover-color: 0, 112, 209;
+  --btn-danger-color: 205, 61, 15;
+  --btn-light-color: 217, 218, 220;
+  --btn-white-color: 245, 245, 245;
+  --blue-color: 0, 112, 209;
+  --bg-grey: 190, 188, 187;
+  --bg-blue: 22, 28, 59;
+}
+
+/* Extends */
+.pt-6 {
+  padding-top: 4rem!important;
+}
+.rounded-4 {
+  border-radius: 0.4rem!important;
+}
+.rounded-5 {
+  border-radius: 0.5rem!important;
+}
+.rounded-6 {
+  border-radius: 0.6rem!important;
+}
+
+/* Common */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--font-base-color));
+}
+
+a {
+  text-decoration: none;
+}
+
+.title-2 {
+  font-size: 2.4em;
+}
+.title-3 {
+  font-size: 1.3em;
+  color: rgba(var(--font-base-color), 0.6);
+}
+.title-4 {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: rgb(var(--blue-color));
+}
+
+a.nav-link {
+  color: rgb(var(--font-base-color));
+}
+a.nav-link:hover,
+a.nav-link:active,
+a.nav-link:focus {
+  color: rgb(var(--a-hover-color));
+}
+
+.btn-inset {
+  color: rgb(var(--font-light-color));
+  border: 2px solid;
+}
+.btn-inset:hover, 
+.btn-inset:active, 
+.btn-inset:focus {
+  border: 2px solid rgba(var(--font-base-color), 0.5);
+  box-shadow: inset 0px 0px 0px 2px rgb(var(--font-light-color));
+}
+
+.btn-danger.btn-inset {
+  color: rgb(var(--font-light-color));
+  border: 2px solid rgb(var(--btn-danger-color));
+}
+.btn-danger.btn-inset:hover, 
+.btn-danger.btn-inset:active, 
+.btn-danger.btn-inset:focus {
+  border: 2px solid rgba(var(--btn-danger-color), 0.5);
+  box-shadow: inset 0px 0px 0px 2px rgb(var(--font-base-color));
+}
+
+.btn-light.btn-inset {
+  background-color: rgba(var(--btn-light-color), 0.5);
+  border: 2px solid rgba(var(--font-base-color), 0);
+  color: rgb(var(--blue-color));
+}
+.btn-light.btn-inset:hover, 
+.btn-light.btn-inset:active, 
+.btn-light.btn-inset:focus {
+  border: 2px solid rgba(var(--btn-light-color), 0.5);
+  box-shadow: 0px 0px 0px 2px rgba(var(--font-light-color), 0.2);
+}
+
+.btn-white.btn-inset {
+  background-color: rgba(var(--btn-white-color), 1);
+  border: 2px solid rgba(var(--font-base-color), 0);
+  color: rgb(var(--font-base-color));;
+}
+.btn-white.btn-inset:hover, 
+.btn-white.btn-inset:active, 
+.btn-white.btn-inset:focus {
+  border: 2px solid rgba(var(--btn-white-color), 1);
+  box-shadow: inset 0px 0px 0px 2px rgba(var(--font-base-color), 1);
+}
+
+/* Backgrounds */
+.bg-grey {
+  background-color: rgb(var(--bg-grey));
+}
+.bg-blue {
+  background-color: rgb(var(--blue-color));
+}
+.bg-blue-dark {
+  background-color: rgb(var(--bg-blue));
+}
+
+/* Layout */
+/* Header */
+.header {
+  background-color: var(--font-light-color);
+}
+/* Header Top */
+.header-top {
+  background-color: black;
+}
+.header-top-logo {
+  width: 5rem;
+}
+/* Header Bottom */ 
+.header-bottom .dropdown-toggle::after {
+  display: inline-block;
+  font-size: 0.7em;
+  font-family: bootstrap-icons;
+  content: "\f282";
+  font-weight: 900;
+  border: 0;
+  vertical-align: middle;
+}
+.header-bottom .dropdown-toggle.show::after {
+    content: "\f286";
+}
+.header-bottom .dropdown-menu {
+  margin-top: -1px;
+}
+.header-bottom .dropdown .list-inline-item .dropdown-item:hover,
+.header-bottom .dropdown .list-inline-item .dropdown-item:active,
+.header-bottom .dropdown .list-inline-item .dropdown-item:focus {
+  box-shadow: 0px 0px 5px rgb(var(--font-base-color), 0.5);
+  background-color: transparent;
+}
+.header-bottom .dropdown .list-inline-item .dropdown-item img {
+  width: 4em;
+}
+.header-bottom .sub-dropdown li{
+  list-style-type: disc;
+  color: rgb(var(--a-hover-color));
+}
+.header-bottom .sub-dropdown li a:link,
+.header-bottom .sub-dropdown li a:visited {
+  color: rgb(var(--font-base-color));
+}
+.header-bottom .sub-dropdown li a:hover,
+.header-bottom .sub-dropdown li a:active,
+.header-bottom .sub-dropdown li a:focus {
+  color: rgb(var(--a-hover-color));
+}
+
+/* jumbo */
+.jumbotron {
+  margin-top: 6em;
+  padding: 17em 0 5em;
+  background-image: url(../img/jumbo-bg.png);
+  background-size: cover;
+  background-position: center;
+  color: rgb(var(--font-light-color));
+}
+.jumbotron-title {
+  font-size: 2.6em;
+}
+
+/* thumbs */
+.thumbs img {
+  position: relative;
+  top: 0;
+  padding: 0.1em;
+  transition: top 0.4s ease-in-out;;
+}
+.thumbs .image-active {
+  border: 0.2em solid rgb(var(--a-hover-color));
+}
+.thumbs a:hover img,  
+.thumbs a:active img,  
+.thumbs a:focus img { 
+  top: -1em;
+}
+
+/* .playstation thumbs */
+.playstation-thumbs a {
+  border-bottom: 2px solid rgba(var(--a-hover-color), 0);
+  opacity: 0.7;
+  font-size: 1.2em;
+  color: rgb(var(--font-base-color));
+}
+.playstation-thumbs a.active,
+.playstation-thumbs a:hover, 
+.playstation-thumbs a:active, 
+.playstation-thumbs a:focus  {
+  opacity: 1;
+  border-bottom: 2px solid rgb(var(--a-hover-color));
+}
+
+/* Banner */
+.banner-game {
+  background-image: url(../img/it-takes-two-hero-banner-desktop.jpg);
+  color: rgb(var(--font-light-color));
+}
+.banner-game .logo {
+  max-width: 60%;
+}
+
+/* grid */
+.game-grid {
+  background-color: rgba(var(--font-base-color), 0.8);
+  color: rgb(var(--font-light-color));
+}
+.game-grid a {
+  color: rgb(var(--font-light-color));
+}
+.game-grid {
+  font-size: 1.5em;
+}
+
+/* display */
+.display h3 {
+  font-size: 2.2em;
+}
+.display p {
+  font-size: 1.3em;
+  color: rgb(var(--font-base-color), 0.6);
+}
+
+/* Footer */
+.region {
+  height: 1.5em;
+}
+.footer-menu a:link, 
+.footer-menu a:visited { 
+  color: white;
+}
+.footer-menu .logo-sony {
+  height: 4em;
+}
